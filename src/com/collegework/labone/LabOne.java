@@ -3,8 +3,6 @@ package src.com.collegework.labone;
 import java.util.Scanner;
 public class LabOne {
     public static Scanner CONSOLE = new Scanner(System.in);
-
-        public static void main(String args[]) {
             System.out.println("Homework weight?");
             int hwWeight = CONSOLE.nextInt();
             System.out.println("Exam 1 weight?");
