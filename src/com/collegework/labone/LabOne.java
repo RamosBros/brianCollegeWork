@@ -1,70 +1,84 @@
 package src.com.collegework.labone;
 
 import java.util.Scanner;
+
 public class LabOne {
-    public static Scanner CONSOLE = new Scanner(System.in);
+    private final Scanner CONSOLE = new Scanner(System.in);
+    private int numHW;
+    private double hwAverageGrade;
+    private int numLateDays;
+    private int labAttendance;
 
-        public static void main(String args[]) {
-            System.out.println("Homework weight?");
-            int hwWeight = CONSOLE.nextInt();
-            System.out.println("Exam 1 weight?");
-            int exam1Weight = CONSOLE.nextInt();
-            int exam2Weight = 100 - (hwWeight + exam1Weight);
-            System.out.println("Weight of exam 2: " + exam2Weight);
-            System.out.println("Using weights " + hwWeight + " " + exam1Weight + " " + exam2Weight);
+    public void startProgram() {
+        System.out.println("Homework weight?");
+        int hwWeight = CONSOLE.nextInt();
 
-            System.out.println("HOMEWORK: ");
-            System.out.println("Number of homeworks have you had?");
-            int numHW = CONSOLE.nextInt();
-            System.out.println("What is your average score of all homeworks?");
-            double hwGrade = CONSOLE.nextDouble();
-            if(hwGrade < 0) {
-                hwGrade = 0;
-            } else if(hwGrade > 10) {
-                hwGrade = 10;
-            }
-            System.out.println("Number of late days used?");
-            int numLateDays = CONSOLE.nextInt();
-            System.out.println("Number of labs you have attended?");
-            int labAttendance = CONSOLE.nextInt();
+        System.out.println("Exam 1 weight?");
+        int exam1Weight = CONSOLE.nextInt();
+        int exam2Weight = 100 - (hwWeight + exam1Weight);
 
-            double totalPoints = hwCalc(numHW, hwGrade, numLateDays, labAttendance);
-            double hwWeightScore = 0;
+        System.out.println("Weight of exam 2: " + exam2Weight);
+        System.out.println("Using weights " + hwWeight + " " + exam1Weight + " " + exam2Weight);
 
-            if(numHW <= 0) {
-                totalPoints = 100;
-                System.out.println("Total points: " + totalPoints + "/" + totalPoints);
-                hwWeightScore = totalPoints/totalPoints*hwWeight;
-            } else {
-                System.out.println("Total points: " + totalPoints + "/" + (numHW * 10 + numHW  * 4));
-                hwWeightScore = totalPoints/(numHW * 10 + numHW * 4) * hwWeight;
-            }
-            System.out.printf("Weighted Score:%2f/n",hwWeightScore);
+        System.out.println("HOMEWORK: ");
+        System.out.println("Number of homeworks have you had?");
+        numHW = CONSOLE.nextInt();
 
+        System.out.println("What is your average score of all homeworks?");
+        hwAverageGrade = CONSOLE.nextDouble();
 
+        if (hwAverageGrade < 0) {
+            hwAverageGrade = 0;
+        } else if (hwAverageGrade > 10) {
+            hwAverageGrade = 10;
         }
 
-        public static double hwCalc(int numHW, double hwGrade, int numLateDays, int labAttendance) {
-            double totalPoints = hwGrade * numHW;
-            if(numLateDays>(numHW)/2.0) {
-                totalPoints = totalPoints - (0.10)*(totalPoints);
-            } else if(numLateDays == 0) {
-                totalPoints = totalPoints + 5;
-            }
-            if(totalPoints > numHW * 10) {
-                totalPoints = numHW * 10;
-            }
-            totalPoints = totalPoints + (labAttendance * 4);
-            return totalPoints;
+        System.out.println("Number of late days used?");
+        numLateDays = CONSOLE.nextInt();
+
+        System.out.println("Number of labs you have attended?");
+        labAttendance = CONSOLE.nextInt();
+
+        double totalPoints = hwCalc();
+        double hwWeightScore;
+
+        if (numHW <= 0) {
+            totalPoints = 100;
+            System.out.println("Total points: " + totalPoints + "/" + totalPoints);
+            hwWeightScore = 1.0 * hwWeight;
+        } else {
+            double temp = (numHW * 10 + numHW * 4);
+            System.out.println("Total points: " + totalPoints + "/" + temp);
+            hwWeightScore = totalPoints / temp * hwWeight;
         }
-        public static double moreZeroLessZero (double examScore) {
-            if(examScore < 0) {
-                examScore = 0;
-            } else if (examScore > 100) {
-                examScore = 100;
-            }
-            return examScore;
-        }
+
+        System.out.printf("Weighted Score:%2f/n", hwWeightScore);
     }
 
+    private double hwCalc() {
+        double totalPoints = hwAverageGrade * numHW;
+
+        if (numLateDays > numHW / 2.0) {
+            totalPoints = totalPoints - (0.10) * (totalPoints);
+        } else if (numLateDays == 0) {
+            totalPoints = totalPoints + 5;
+        }
+
+        if (totalPoints > numHW * 10) {
+            totalPoints = numHW * 10;
+        }
+
+        totalPoints = totalPoints + (labAttendance * 4);
+        return totalPoints;
+    }
+
+    private double moreZeroLessZero(double examScore) {
+        if (examScore < 0) {
+            examScore = 0;
+        } else if (examScore > 100) {
+            examScore = 100;
+        }
+        return examScore;
+    }
 }
+
