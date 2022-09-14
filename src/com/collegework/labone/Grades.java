@@ -9,14 +9,18 @@ public class Grades {
     public static void main(String[] args) {
         System.out.println("Homework weight?");
         int hwWeight = CONSOLE.nextInt();
+
         System.out.println("Exam 1 weight?");
         int exam1Weight = CONSOLE.nextInt();
         int exam2Weight = 100 - (hwWeight + exam1Weight);
+
         System.out.println("Using weights " + hwWeight + " " + exam1Weight + " " + exam2Weight);
 
         System.out.println("HOMEWORK: ");
+
         System.out.println("Number of homeworks have you had?");
         int numHW = CONSOLE.nextInt();
+
         System.out.println("What is your average score of all homeworks?");
         double hwGrade = CONSOLE.nextDouble();
         if (hwGrade < 0) {
@@ -24,8 +28,10 @@ public class Grades {
         } else if (hwGrade > 10) {
             hwGrade = 10;
         }
+
         System.out.println("Number of late days used?");
         int numLateDays = CONSOLE.nextInt();
+
         System.out.println("Number of labs you have attended?");
         int labAttendance = CONSOLE.nextInt();
 
@@ -40,6 +46,7 @@ public class Grades {
             System.out.println("Total points: " + totalPoints + "/" + (numHW * 10 + numHW * 4));
             hwWeightScore = totalPoints / (numHW * 10 + numHW * 4) * hwWeight;
         }
+
         System.out.println("Weighted Score: " + hwWeightScore);
 
         System.out.println("Exam 1 Score?: ");
@@ -60,16 +67,21 @@ public class Grades {
         //Calculating the weighted score
         double exam1WeightScore = exam1Score / 100.0 * exam1Weight;
         System.out.println("Weighted score " + exam1WeightScore);
+
         //exam 2 grade
         System.out.println("Weight of exam 2: " + exam2Weight);
         System.out.println("Exam 2 Score?:");
         double exam2Score = CONSOLE.nextDouble();
+
         System.out.println("Curve?");
         int exam2Curve = CONSOLE.nextInt();
+
         exam2Score += exam2Curve;
         exam2Score = examConiditionB(exam2Score);
         double exam2WeightScore = exam2Score / 100.0 * exam2Weight;
+
         System.out.println("Weighted score " + exam2WeightScore);
+
         System.out.println("Total points " + exam2Score + "/100");
 
         /*
