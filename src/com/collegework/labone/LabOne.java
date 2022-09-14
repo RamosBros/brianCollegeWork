@@ -3,6 +3,7 @@ package src.com.collegework.labone;
 import java.util.Scanner;
 
 public class LabOne {
+
     private final Scanner CONSOLE = new Scanner(System.in);
     private int numHW;
     private double hwAverageGrade;
