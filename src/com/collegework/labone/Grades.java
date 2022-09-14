@@ -64,7 +64,7 @@ public class Grades {
         double exam1Score = INPUT.nextDouble();
 
         //adjusts score according to function examConditionB
-        exam1Score = examConiditionB(exam1Score);
+        exam1Score = examConditionB(exam1Score);
 
         //curve
         System.out.print("Curve Amount?: ");
@@ -92,7 +92,7 @@ public class Grades {
 
         //adjusts score according to condition see function below
         exam2Score += exam2Curve;
-        exam2Score = examConiditionB(exam2Score);
+        exam2Score = examConditionB(exam2Score);
         double exam2WeightScore = exam2Score / 100.0 * exam2Weight;
 
         System.out.println("Weighted score: " + exam2WeightScore);
@@ -124,7 +124,7 @@ public class Grades {
     }
 
     // checks if values are below zero or above a hundred and corrects them
-    public static double examConiditionB(double examScore) {
+    public static double examConditionB(double examScore) {
         if (examScore < 0) {
             examScore = 0;
         } else if (examScore > 100) {
