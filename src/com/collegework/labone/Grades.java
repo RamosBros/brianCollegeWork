@@ -14,10 +14,10 @@ public class Grades {
 
     public static void main(String[] args) {
 
-        System.out.println("Homework weight?");
+        System.out.print("Homework weight?: ");
         int hwWeight = INPUT.nextInt();
 
-        System.out.println("Exam 1 weight?");
+        System.out.print("Exam 1 weight?: ");
         int exam1Weight = INPUT.nextInt();
         int exam2Weight = 100 - (hwWeight + exam1Weight);
 
@@ -25,10 +25,10 @@ public class Grades {
 
         System.out.println("HOMEWORK: ");
 
-        System.out.println("Number of homeworks have you had?");
+        System.out.print("Number of homeworks that you've had: ");
         int numHW = INPUT.nextInt();
 
-        System.out.println("What is your average score of all homeworks?");
+        System.out.print("Average score of homeworks?: ");
         double hwGrade = INPUT.nextDouble();
         if (hwGrade < 0) {
             hwGrade = 0;
@@ -36,11 +36,11 @@ public class Grades {
             hwGrade = 10;
         }
 
-        System.out.println("Number of late days used?");
+        System.out.print("Number of late days used?: ");
         int numLateDays = INPUT.nextInt();
 
 
-        System.out.println("Number of labs you have attended?");
+        System.out.print("Number of labs you have attended?: ");
         int labAttendance = INPUT.nextInt();
 
 
@@ -58,14 +58,14 @@ public class Grades {
 
         System.out.println("Weighted Score: " + hwWeightScore);
 
-        System.out.println("Exam 1 Score?: ");
+        System.out.print("Exam 1 Score?: ");
         double exam1Score = INPUT.nextDouble();
 
         //adjusts score according to function examConditionB
         exam1Score = examConiditionB(exam1Score);
 
         //curve
-        System.out.println("Curve?");
+        System.out.print("Curve Amount?: ");
         int exam1Curve = INPUT.nextInt();
 
         exam1Score += exam1Curve;
@@ -77,15 +77,15 @@ public class Grades {
 
         //Calculating the weighted score
         double exam1WeightScore = exam1Score / 100.0 * exam1Weight;
-        System.out.println("Weighted score " + exam1WeightScore);
+        System.out.println("Weighted score: " + exam1WeightScore);
 
         //exam 2 grade
         System.out.println("Weight of exam 2: " + exam2Weight);
-        System.out.println("Exam 2 Score?:");
+        System.out.print("Exam 2 Score?:");
         double exam2Score = INPUT.nextDouble();
 
 
-        System.out.println("Curve?");
+        System.out.print("Curve Amount?: ");
         int exam2Curve = INPUT.nextInt();
 
         //adjusts score according to condition see function below
@@ -93,15 +93,15 @@ public class Grades {
         exam2Score = examConiditionB(exam2Score);
         double exam2WeightScore = exam2Score / 100.0 * exam2Weight;
 
-        System.out.println("Weighted score " + exam2WeightScore);
+        System.out.println("Weighted score: " + exam2WeightScore);
 
-        System.out.println("Total points " + exam2Score + "/100");
+        System.out.println("Total points: " + exam2Score + "/100");
 
         /*
         final grade
          */
         double courseGrade = hwWeightScore + exam1WeightScore + exam2WeightScore;
-        System.out.println("Course grade " + courseGrade);
+        System.out.println("Course grade: " + courseGrade);
 
     }
 
