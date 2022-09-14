@@ -1,10 +1,12 @@
 /*
 Brian Edgardo Ramos-Leiva
 CIS 1068, Program Design and Abstraction
+Lab 3, Grade Calculator
 9/19/2022
 
-this code takes in several integers from a user (assuming the integers aren't negative)
+this code takes in several integers from a user, adjusts them if they are negative
 and computes their grades according to weights, attendance, and exams.
+Uses two functions to adjust values and compute simple arithmetic expressions.
  */
 package src.com.collegework.labone;
 import java.util.Scanner;
