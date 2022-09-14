@@ -2,13 +2,30 @@ package src.com.collegework.labone;
 
 import java.util.Scanner;
 
+/**
+ * This is a class in JAVA
+ * <p>
+ * To click this link just do [ CTRL + Click it ]
+ * <p>
+ * <a href="https://www.geeksforgeeks.org/classes-objects-java/">Classes</a>
+ */
 public class LabOne {
-
-    private final Scanner CONSOLE = new Scanner(System.in);
     private int numHW;
-    private double hwAverageGrade;
     private int numLateDays;
     private int labAttendance;
+    private double hwAverageGrade;
+
+    /**
+     * These are called class instance variables
+     * <a href="https://www.geeksforgeeks.org/difference-between-instance-variable-and-class-variable/">Instance Variables</a>
+     * <p>
+     * This "private" is called an access modifier, there are four [ public, private, default, package-private/protected ]
+     * <a href="https://www.geeksforgeeks.org/access-modifiers-java/">Access Modifiers</a>
+     * <p>
+     * The word "final" is a non-access modifier
+     * <a href="https://www.geeksforgeeks.org/final-keyword-in-java/">Non-Access Modifiers</a>
+     */
+    private final Scanner CONSOLE = new Scanner(System.in);
 
     public void startProgram() {
         System.out.println("Homework weight?");
@@ -56,6 +73,12 @@ public class LabOne {
         System.out.printf("Weighted Score:%2f/n", hwWeightScore);
     }
 
+    /**
+     * Do you see how this method doesn't take in parameters in the method signature like it did before?
+     * <p>
+     * That's because now, this method is part of this class, and the class now has instance variables, meaning that
+     * our methods in this class have access to those fields and can modify them and use them
+     */
     private double hwCalc() {
         double totalPoints = hwAverageGrade * numHW;
 
