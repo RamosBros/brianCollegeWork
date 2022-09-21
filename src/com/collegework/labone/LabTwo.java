@@ -19,7 +19,7 @@ public class LabTwo {
         while(yn.equals("y")) {
             rndPlayed++;
             System.out.println("Please enter a move!: ");
-            String playerMove = INPUT.next();
+            String playerMove = INPUT.nextLine().toLowerCase();
             playerMove = inputValid(playerMove);
             System.out.println("The computer chooses: ");
             String whoWins = WhoWins(playerMove, CompMove());
@@ -35,21 +35,20 @@ public class LabTwo {
 
 
     }
+    /* is this more readable ?
+    aka switch statements B)
+     */
     public static String inputValid(String playerMove) {
-        playerMove.toLowerCase();
-        if(playerMove.equals("pershult")) {
-            playerMove = "Pershult";
-        } else if(playerMove.equals("klyket")) {
-            playerMove = "Klyket";
-        } else if (playerMove.equals("tjusig")) {
-            playerMove = "Tjusig";
-        } else if (playerMove.equals("skadis")) {
-            playerMove = "Skadis";
-        } else if (playerMove.equals("hovolm")) {
-            playerMove = "Hovolm";
-        } else {
-            System.out.println("Please input valid move: ");
-            playerMove = INPUT.next();
+        switch (playerMove) {
+            case "pershult" -> playerMove = "Pershult";
+            case "klyket" -> playerMove = "Klyket";
+            case "tjusig" -> playerMove = "Tjusig";
+            case "skadis" -> playerMove = "Skadis";
+            case "hovolm" -> playerMove = "Hovolm";
+            default -> {
+                System.out.println("Please input valid move: ");
+                playerMove = INPUT.next();
+            }
         }
         return playerMove;
     }
@@ -63,18 +62,13 @@ public class LabTwo {
     public static String CompMove() {
         String compMove = "placeholder";
         int randomNumber = RAND.nextInt(5);
-        if (randomNumber == 0) {
-            compMove = "Perhsult";
-        } else if (randomNumber == 1) {
-            compMove = "Klyket";
-
-        } else if (randomNumber == 2) {
-            compMove = "Tjusig";
-        } else if (randomNumber == 3) {
-            compMove = "Skadis";
-        } else {
-            compMove = "Hovolm";
-        }
+        compMove = switch (randomNumber) {
+            case 0 -> "Perhsult";
+            case 1 -> "Klyket";
+            case 2 -> "Tjusig";
+            case 3 -> "Skadis";
+            default -> "Hovolm";
+        };
         System.out.println(compMove);
         return compMove;
     }
