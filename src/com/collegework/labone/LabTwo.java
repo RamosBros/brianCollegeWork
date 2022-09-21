@@ -5,8 +5,8 @@ import java.util.*;
 public class LabTwo {
 
     public static Scanner INPUT = new Scanner(System.in);
-
-    public  void main(String[] args) {
+    public static Random RAND = new Random();
+    public static void main(String[] args) {
         int rndPlayed = 0;
         int userWon = 0;
         int compWon = 0;
@@ -21,6 +21,9 @@ public class LabTwo {
             System.out.println("Please enter a move!: ");
             String playerMove = INPUT.next();
             playerMove = inputValid(playerMove);
+            System.out.println("The computer chooses: ");
+            String whoWins = WhoWins(playerMove, CompMove());
+            System.out.println(whoWins);
 
 
         }
@@ -32,13 +35,15 @@ public class LabTwo {
 
 
     }
-    public String inputValid(String playerMove) {
+    public static String inputValid(String playerMove) {
         playerMove.toLowerCase();
         if(playerMove.equals("pershult")) {
             playerMove = "Pershult";
         } else if(playerMove.equals("klyket")) {
             playerMove = "Klyket";
         } else if (playerMove.equals("tjusig")) {
+            playerMove = "Tjusig";
+        } else if (playerMove.equals("skadis")) {
             playerMove = "Skadis";
         } else if (playerMove.equals("hovolm")) {
             playerMove = "Hovolm";
@@ -54,6 +59,43 @@ public class LabTwo {
         System.out.println("Tjusig beats Pershult, Skadis");
         System.out.println("Skadis Beats Hovolm, Klyket");
         System.out.println("Hovolm beats Pershult, Tjusig");
+    }
+    public static String CompMove() {
+        String compMove = "placeholder";
+        int randomNumber = RAND.nextInt(5);
+        if (randomNumber == 0) {
+            compMove = "Perhsult";
+        } else if (randomNumber == 1) {
+            compMove = "Klyket";
+
+        } else if (randomNumber == 2) {
+            compMove = "Tjusig";
+        } else if (randomNumber == 3) {
+            compMove = "Skadis";
+        } else {
+            compMove = "Hovolm";
+        }
+        System.out.println(compMove);
+        return compMove;
+    }
+    public static String WhoWins(String playerMove, String compMove) {
+        String whoWins = "placeholder";
+        if (playerMove.equals(compMove)) {
+            whoWins = "Computer Wins!";
+        } else if (playerMove.equals("pershult") && compMove.equals("Klyket") || compMove.equals("Skadis")) {
+            whoWins = "Player Wins!";
+        } else if (playerMove.equals("klyket") && compMove.equals("Tjusig") || compMove.equals("Hovolm")) {
+            whoWins = "Player Wins!";
+        } else if (playerMove.equals("tjusig") && compMove.equals("Perhsult") || compMove.equals("Skadis")) {
+            whoWins = "Player Wins!";
+        } else if (playerMove.equals("skadis") && compMove.equals("Hovolm") || compMove.equals("Klyket")) {
+            whoWins = "Player Wins!";
+        } else if (playerMove.equals("hovolm") && compMove.equals("Pershult") || compMove.equals("Tjusig")) {
+            whoWins = "Player Wins!";
+        } else {
+            whoWins = "Computer Wins!";
+        }
+        return whoWins;
     }
 }
 
