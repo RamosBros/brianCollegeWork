@@ -13,17 +13,16 @@ public class LabTwo {
         System.out.println("The rules of the game are as follows!: ");
         Rules();
 
-
         System.out.println("Would you like to play a round?");
         String yn = INPUT.next();
         while(yn.equals("y")) {
             rndPlayed++;
-            System.out.println("Please enter a move!: ");
-            String playerMove = INPUT.nextLine().toLowerCase();
-            playerMove = inputValid(playerMove);
-            System.out.println("The computer chooses: ");
-            String whoWins = WhoWins(playerMove, CompMove());
-            System.out.println(whoWins);
+            play_a_round();
+            yn = INPUT.next();
+//            System.out.println("The computer chooses: ");
+//            CompMove();
+//            String whoWins = WhoWins(playerMove, CompMove());
+//            System.out.println(whoWins);
 
 
         }
@@ -35,20 +34,20 @@ public class LabTwo {
 
 
     }
-    /* is this more readable ?
-    aka switch statements B)
-     */
     public static String inputValid(String playerMove) {
-        switch (playerMove) {
-            case "pershult" -> playerMove = "Pershult";
-            case "klyket" -> playerMove = "Klyket";
-            case "tjusig" -> playerMove = "Tjusig";
-            case "skadis" -> playerMove = "Skadis";
-            case "hovolm" -> playerMove = "Hovolm";
-            default -> {
-                System.out.println("Please input valid move: ");
-                playerMove = INPUT.next();
-            }
+        playerMove.toLowerCase();
+        if(playerMove.equals("pershult")) {
+            playerMove = String.valueOf(true);
+        } else if(playerMove.equals("klyket")) {
+            playerMove = String.valueOf(true);
+        } else if (playerMove.equals("tjusig")) {
+            playerMove = String.valueOf(true);
+        } else if (playerMove.equals("skadis")) {
+            playerMove = String.valueOf(true);
+        } else if (playerMove.equals("hovolm")) {
+            playerMove = String.valueOf(true);
+        } else {
+            playerMove = String.valueOf(false);
         }
         return playerMove;
     }
@@ -62,13 +61,18 @@ public class LabTwo {
     public static String CompMove() {
         String compMove = "placeholder";
         int randomNumber = RAND.nextInt(5);
-        compMove = switch (randomNumber) {
-            case 0 -> "Perhsult";
-            case 1 -> "Klyket";
-            case 2 -> "Tjusig";
-            case 3 -> "Skadis";
-            default -> "Hovolm";
-        };
+        if (randomNumber == 0) {
+            compMove = "Perhsult";
+        } else if (randomNumber == 1) {
+            compMove = "Klyket";
+
+        } else if (randomNumber == 2) {
+            compMove = "Tjusig";
+        } else if (randomNumber == 3) {
+            compMove = "Skadis";
+        } else {
+            compMove = "Hovolm";
+        }
         System.out.println(compMove);
         return compMove;
     }
@@ -90,6 +94,21 @@ public class LabTwo {
             whoWins = "Computer Wins!";
         }
         return whoWins;
+
+    }
+    public static void play_a_round() {
+        System.out.println("Please enter a move!: ");
+        String playerMove = INPUT.next();
+        String validResult = inputValid(playerMove);
+        while (validResult == String.valueOf(false)) {
+            System.out.println("Please input valid move: ");
+            playerMove = INPUT.next();
+            validResult = inputValid(playerMove);
+        }
+        System.out.println("The Computer chooses: ");
+        String whoWins = WhoWins(playerMove, CompMove());
+        System.out.println(whoWins);
+        System.out.println("Would you like to play again?");
     }
 }
 
