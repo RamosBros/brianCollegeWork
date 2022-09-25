@@ -1,6 +1,61 @@
 package src.com.collegework.labtwo;
+/*
+public class AGame {
+import scanner and random function
+--> private static final Scanner INPUT = new Scanner(System.in);
+--> private static final Random RAND = new Random();
+private static class main(String[] args){
+int rndPlay=0;
+int compWon=0;
+int userWon=0;
+System.out.println("RULES")
+create function for rules
+--> Rules();
+System.out.println("would user like to play");
+String userInput = INPUT.next();
 
-import java.util.*;
+while(userInput.equals("y")){
+rndPlay++;
+if(CompWins){
+compWon++;
+system.out.println("computer wins");
+} else {
+userWon++;
+system.out.println("User wins");
+}
+System.out.println("Would yo like to play again?")
+userInput=INPUT.next();
+}
+print stats usings println(rndplay, compwon, etc)
+}
+create several functions,
+
+checkIfINputvalid
+use switch to make cleaner and test several cases,
+if boolean is returned as true allow input
+if false, prompt user again
+
+Rules
+simple, several print statements of the rules
+
+ComputerMove
+int randNmb generate random number
+switch statement to assign moves to different random integers.
+return compMove
+
+whoWins
+evaluate the several cases based on rules.
+Conditional statements && and ||.
+severla if, else if statements.
+
+isCompWinner
+take in inputs from user and computer uses function to compare whoWins and check who wins
+print out if computer wins.
+}
+ */
+
+import java.util.Scanner;
+import java.util.Random;
 
 public class LabTwo {
     private static final Scanner INPUT = new Scanner(System.in);
@@ -71,7 +126,6 @@ public class LabTwo {
             case 3 -> SKADIS;
             default -> HOVOLM;
         };
-
         return computerChoice;
     }
 
