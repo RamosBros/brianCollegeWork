@@ -8,7 +8,7 @@ this code takes in several integers from a user, adjusts them if they are negati
 and computes their grades according to weights, attendance, and exams.
 Uses two functions to adjust values and compute simple arithmetic expressions.
  */
-package src.com.collegework.labone;
+package src.com.collegework;
 import java.util.Scanner;
 public class Grades {
 

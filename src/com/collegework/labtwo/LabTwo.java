@@ -1,4 +1,4 @@
-package src.com.collegework.labone;
+package src.com.collegework.labtwo;
 
 import java.util.*;
 
