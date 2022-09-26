@@ -5,26 +5,24 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
-
+import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.Map;
 
 /**
  * just a Test class for what I think could have been done to improve the class a bit
  * <p>
- * The cool thing about this, is that if we want to add more variations or differnt conditions of who wins/loses
- * we simply add it to the combinations.json file and dont need to code any more
+ * The cool thing about this, is that if we want to add more variations or different conditions of who wins/loses
+ * we simply add it to the combinations.json file and don't need to code anymore
  * <p>
- * Remember everything is data, use that to your advantage
+ * Remember everything is data, use that to your advantage, data driven architecture and TTD (test driven development)
  */
 public class LennyLabTwo {
     private final Scanner INPUT;
     private final Random RAND;
-
-    /**
-     * This would be way better if we had a json file for it,
-     * so lets make it
-     */
-    HashMap<String, List<String>> combinations;
+    private HashMap<String, List<String>> combinations;
 
     /**
      * base constructor, look up what this means if you don't know already
