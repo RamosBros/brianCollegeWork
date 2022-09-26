@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static Scanner INPUT = new Scanner(System.in);
     public static void main(String[] args) {
-//        doenst work atm cause im dumb but i will get it working soon no kizzy owo
+//        doenst work atm 
 
         /* System.out.println("How much do you love me on a scale of one - 10");
         int userInput = INPUT.nextLine();
