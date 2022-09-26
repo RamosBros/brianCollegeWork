@@ -31,7 +31,7 @@ print stats usings println(rndplay, compwon, etc)
 create several functions,
 
 checkIfINputvalid
-use switch to make cleaner and test several cases,
+use switch to make cleaner and test.test several cases,
 if boolean is returned as true allow input
 if false, prompt user again
 

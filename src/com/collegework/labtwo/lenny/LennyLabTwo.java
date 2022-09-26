@@ -1,4 +1,4 @@
-package src.com.collegework.labtwo.lenny;
+package com.collegework.labtwo.lenny;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -9,7 +9,12 @@ import java.util.*;
 
 
 /**
- * just a test class for what i think could have been done to improve the class a bit
+ * just a Test class for what I think could have been done to improve the class a bit
+ * <p>
+ * The cool thing about this, is that if we want to add more variations or differnt conditions of who wins/loses
+ * we simply add it to the combinations.json file and dont need to code any more
+ * <p>
+ * Remember everything is data, use that to your advantage
  */
 public class LennyLabTwo {
     private final Scanner INPUT;
@@ -33,11 +38,9 @@ public class LennyLabTwo {
             System.out.println("Damn it failed");
             System.out.println(exception);
         }
-
-        startLab();
     }
 
-    private void startLab() {
+    public void startLab() {
         int roundsPlayed = 0;
         int userRoundsWon = 0;
         int computerRoundsWon = 0;
@@ -50,13 +53,15 @@ public class LennyLabTwo {
 
         while (userInput.equals("y")) {
             roundsPlayed++;
-            if (isComputerWinner()) {
-                computerRoundsWon++;
-                System.out.println("Computer wins!");
-            } else {
+
+            if (isPlayerWinner()) {
                 userRoundsWon++;
                 System.out.println("User wins!");
+            } else {
+                computerRoundsWon++;
+                System.out.println("Computer wins!");
             }
+
             System.out.println("Would you like to play again?");
             userInput = INPUT.next();
         }
@@ -91,7 +96,7 @@ public class LennyLabTwo {
         }
     }
 
-    public boolean isComputerWinner() {
+    private boolean isPlayerWinner() {
         System.out.println("Please enter a move!: ");
         String playerMove = INPUT.next();
 
@@ -103,13 +108,24 @@ public class LennyLabTwo {
         String computerMove = computerMove();
         System.out.println("The Computer chooses: " + computerMove);
 
-        String whoWins = whoWins(playerMove, computerMove);
-
-        return whoWins.equals("Computer Wins!");
+        return checkWinner(playerMove, computerMove);
     }
 
-    public String computerMove() {
+    /**
+     * We are just making this into a method, so we can use junit to test.test our different combos
+     */
+    public boolean checkWinner(String playerMove, String computerMove) {
+        List<String> playerMoveBeats = combinations.get(playerMove);
+        return playerMoveBeats.contains(computerMove);
+    }
+
+    /**
+     * instead of querying for the keySet each round we could probably store that to save computation
+     *
+     * @return
+     */
+    private String computerMove() {
         int randomNumber = RAND.nextInt(4);
-        return combinations.entrySet().toArray()[randomNumber].toString();
+        return combinations.keySet().toArray()[randomNumber].toString();
     }
 }
