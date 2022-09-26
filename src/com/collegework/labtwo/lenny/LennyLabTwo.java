@@ -96,9 +96,9 @@ public class LennyLabTwo {
 
     private boolean isPlayerWinner() {
         System.out.println("Please enter a move!: ");
-        String playerMove = INPUT.next();
+        String playerMove = INPUT.next().toLowerCase();
 
-        while (!combinations.containsKey(playerMove.toLowerCase())) {
+        while (!combinations.containsKey(playerMove)) {
             System.out.println("Please input valid move: ");
             playerMove = INPUT.next();
         }
