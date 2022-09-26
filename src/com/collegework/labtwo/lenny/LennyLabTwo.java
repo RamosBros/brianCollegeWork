@@ -100,7 +100,7 @@ public class LennyLabTwo {
         System.out.println("Please enter a move!: ");
         String playerMove = INPUT.next();
 
-        while (!combinations.containsKey(playerMove)) {
+        while (!combinations.containsKey(playerMove.toLowerCase())) {
             System.out.println("Please input valid move: ");
             playerMove = INPUT.next();
         }
@@ -112,7 +112,7 @@ public class LennyLabTwo {
     }
 
     /**
-     * We are just making this into a method, so we can use junit to test.test our different combos
+     * We are just making this into a method, so we can use junit to test our different combos
      */
     public boolean checkWinner(String playerMove, String computerMove) {
         List<String> playerMoveBeats = combinations.get(playerMove);
