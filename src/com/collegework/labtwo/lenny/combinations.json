@@ -1,0 +1,22 @@
+{
+  "pershult": [
+    "klyket",
+    "skadis"
+  ],
+  "klyket": [
+    "tjusig",
+    "hovolm"
+  ],
+  "tjusig": [
+    "pershult",
+    "skadis"
+  ],
+  "skadis": [
+    "hovolm",
+    "klyket"
+  ],
+  "hovolm": [
+    "pershult",
+    "tjusig"
+  ]
+}
