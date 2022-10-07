@@ -18,20 +18,20 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]](https://github.com/RamosBros/brianCollegeWork/graphs/contributors)[contributors-url]
-[![Forks][forks-shield]](https://github.com/RamosBros/brianCollegeWork/network/members)[forks-url]
-[![Stargazers][stars-shield]](https://github.com/RamosBros/brianCollegeWork/stargazers)[stars-url]
-[![Issues][issues-shield]](https://github.com/RamosBros/brianCollegeWork/issues)[issues-url]
-[![MIT License][license-shield]]()[license-url]
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/brianramos1/)[linkedin-url]
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/lennyramos/)[linkedin-url]
+[![Contributors][contributors-shield]](https://github.com/RamosBros/brianCollegeWork/graphs/contributors)
+[![Forks][forks-shield]](https://github.com/RamosBros/brianCollegeWork/network/members)
+[![Stargazers][stars-shield]](https://github.com/RamosBros/brianCollegeWork/stargazers)
+[![Issues][issues-shield]](https://github.com/RamosBros/brianCollegeWork/issues)
+[![MIT License][license-shield]]()
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/brianramos1/)
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/lennyramos/)
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/RamosBros/brianCollegeWork">
     <img src="resources/images/kuga.jpg" alt="Logo" width="80" height="80">
   </a>
 
@@ -41,14 +41,14 @@
     
 all java work done by Brian in college
 <br />
-<a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+<a href="https://github.com/RamosBros/brianCollegeWork"><strong>Explore the docs »</strong></a>
 <br />
 <br />
-<a href="https://github.com/github_username/repo_name">View Demo</a>
+<a href="https://github.com/RamosBros/brianCollegeWork">View Demo</a>
 ·
-<a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+<a href="https://github.com/RamosBros/brianCollegeWork/issues">Report Bug</a>
 ·
-<a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+<a href="https://github.com/RamosBros/brianCollegeWork/issues">Request Feature</a>
   </p>
 </div>
 
@@ -86,11 +86,13 @@ all java work done by Brian in college
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[//]: # ([![Product Name Screen Shot]&#40;&#41;[product-screenshot]]&#40;https://example.com&#41;)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor
-for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`
-, `project_title`, `project_description`
+[//]: # (Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor)
+
+[//]: # (for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`)
+
+[//]: # (, `project_title`, `project_description`)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,51 +113,81 @@ for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_u
 
 <!-- GETTING STARTED -->
 
-## Getting Started
+[//]: # (## Getting Started)
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+[//]: # ()
+[//]: # (This is an example of how you may give instructions on setting up your project locally.)
 
-### Prerequisites
+[//]: # (To get a local copy up and running follow these simple example steps.)
 
-This is an example of how to list things you need to use the software and how to install them.
+[//]: # ()
+[//]: # (### Prerequisites)
 
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+[//]: # ()
+[//]: # (This is an example of how to list things you need to use the software and how to install them.)
 
-### Installation
+[//]: # ()
+[//]: # (* npm)
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+[//]: # (  ```sh)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[//]: # (  npm install npm@latest -g)
+
+[//]: # (  ```)
+
+[//]: # ()
+[//]: # (### Installation)
+
+[//]: # ()
+[//]: # (1. Get a free API Key at [https://example.com]&#40;https://example.com&#41;)
+
+[//]: # (2. Clone the repo)
+
+[//]: # (   ```sh)
+
+[//]: # (   git clone https://github.com/github_username/repo_name.git)
+
+[//]: # (   ```)
+
+[//]: # (3. Install NPM packages)
+
+[//]: # (   ```sh)
+
+[//]: # (   npm install)
+
+[//]: # (   ```)
+
+[//]: # (4. Enter your API in `config.js`)
+
+[//]: # (   ```js)
+
+[//]: # (   const API_KEY = 'ENTER YOUR API';)
+
+[//]: # (   ```)
+
+[//]: # ()
+[//]: # (<p align="right">&#40;<a href="#readme-top">back to top</a>&#41;</p>)
+
+[//]: # ()
 
 
+[//]: # (<!-- USAGE EXAMPLES -->)
 
-<!-- USAGE EXAMPLES -->
+[//]: # ()
+[//]: # (## Usage)
 
-## Usage
+[//]: # ()
+[//]: # (Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos)
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos
-work well in this space. You may also link to more resources.
+[//]: # (work well in this space. You may also link to more resources.)
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+[//]: # ()
+[//]: # (_For more examples, please refer to the [Documentation]&#40;https://example.com&#41;_)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[//]: # ()
+[//]: # (<p align="right">&#40;<a href="#readme-top">back to top</a>&#41;</p>)
 
+[//]: # ()
 
 
 <!-- ROADMAP -->
@@ -167,7 +199,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and
+See the [open issues](https://github.com/RamosBros/brianCollegeWork/issues) for a full list of proposed features (and
 known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -209,9 +241,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Brian Ramos - [personal website](BrianEBranch.github.io) - tup86891@temple.edu
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Lenny Ramos - [personal website](https://lennyramos.com/Home) - <!-- add whatever email/link here leonard: email@email_client.com -->
+
+Project Link: [https://github.com/RamosBros/brianCollegeWork](https://github.com/RamosBros/brianCollegeWork)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
