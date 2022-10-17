@@ -1,3 +1,17 @@
+/*
+Brian Edgardo Ramos-Leiva
+CIS 1068, Program Design and Abstraction
+Lab 5, Webify
+10/7/2022
+
+This program takes in a file from the user, looks for certain key characters like _ and - to convert it to html then
+prints it all out back to the user. This program uses a while loops and some nested if else statements.
+ */
+
+
+
+
+
 package src.com.collegework.labthree;
 
 import java.io.File;
@@ -26,12 +40,10 @@ public class Webify {
 
         while (userInput.hasNextLine()) {
             String newLine = userInput.nextLine();
-//            System.out.println(newLine);
-            if (isLastLineOfList == true) {
+            if (isLastLineOfList) {
                 if (!newLine.startsWith("-")) {
                     System.out.println("</ul>");
                     isLastLineOfList = false;
-                    isFirstLineOfList = true;
                 }
             }
             if (newLine.length() == 0) {
@@ -42,7 +54,7 @@ public class Webify {
                     System.out.println("<h1>" + newString + "</h1>");
                 } else if (newLine.startsWith("-")) {
                     isLastLineOfList = true;
-                    if (isFirstLineOfList == true) {
+                    if (isFirstLineOfList) {
                         System.out.println("<ul>");
                         isFirstLineOfList = false;
                     }
