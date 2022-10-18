@@ -1,5 +1,7 @@
 package src.com.collegework.labfour;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class StringPractice {
 
     /*
@@ -167,7 +169,7 @@ public class StringPractice {
     public static boolean foundIn(String s, char c) {
         for (int i = 0; i <= s.length() - 1; i++) {
             char indChar = s.charAt(i);
-            if (c == indChar) {
+            if (indChar == c) {
                 return true;
             }
         }
@@ -179,8 +181,16 @@ public class StringPractice {
      * otherwise.
      */
     public static boolean containsNone(String s, String chars) {
-
-        return false;
+        for (int i = 0; i <= chars.length() - 1; i++) {
+            char indChar1 = chars.charAt(i);
+            for (int j = 0; j <= s.length() - 1; j++) {
+                char indChar = s.charAt(j);
+                if (indChar == indChar1) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     /*
@@ -190,6 +200,12 @@ public class StringPractice {
      */
 
     public static boolean onlyPunct(String s) {
+        for (int i = 0; i <= s.length() - 1; i++) {
+            char indChar = s.charAt(i);
+            if (!isPunct(indChar)) {
+                return false;
+            }
+        }
         return true;
     }
 
@@ -199,6 +215,12 @@ public class StringPractice {
      * Use at least one of your other functions in this one.
      */
     public static boolean noPunct(String s) {
+        for (int i = 0; i <= s.length() - 1; i++) {
+            char indChar = s.charAt(i);
+            if (isPunct(indChar)) {
+                return false;
+            }
+        }
         return true;
     }
 
@@ -207,8 +229,93 @@ public class StringPractice {
      * otherwise
      *
      * use at least one of your other methods in your solution to this method
+     * cat!
+     * indChar = c
+     * indChar2 = a
+     * if(false && false){
+     *}
+     *indChar = a
+     *indChar = t
+     *if(false && false){
+     *}
+     *indChar = t
+     *indChar = !
+     *if(false && true){
+     *false
+     *}
+     *indChar = !
+     *indChar = null
+     *assertTrue(StringPractice.consecutivePuncts("!,"));
+     *indChar = !
+     *indChar2 = 0
+     *if(true & false)
+     *cat
+     *indChar = c
+     *indChar2 = 0
+     *if(0 + 1 < 3 - 1){
+     *indChar2 = s.charAt(0 + 1)
+     *indChar2 = a
+     *}
+     *if(false && false){
+     *return true;
+     *char indChar = s.charAt(1)
+     *indChar = a
+     *char indChar2 = 0;
+     *if(1 + 1 <= s.length - 1){
+     *}
+     *Tests for i < s.length()
+     *cat
+     *for(int i = 0; i < 3; i++){
+     *char indChar = s.charAt(0);
+     *indChar = c;
+     *char indChar2 = 0;
+     *if(0 + 1 < 3){
+     *indChar2 = s.charAt(0 + 1);
+     *indChar2 = a;
+     *}
+     *if(false && false)
+     *i = 1;
+     *char indChar = s.charAt(1);
+     *indChar = a;
+     *Char indChar2 = 0;
+     *if(1 + 1 < 3){
+     *indChar2 = s.charAt(1 + 1);
+     *indChar2 = t;
+     *if(false && false)
+     *i = 2;
+     *char indChar = s.charAt(2);
+     *indChar = t;
+     *char indChar2 = 0;
+     *if( 2 + 1 < 3){
+     *if(false && false)
+     *returns false;
+     *
      */
+
     public static boolean consecutivePuncts(String s) {
+        for (int i = 0; i < s.length(); i++) {
+            char indChar = s.charAt(i);
+            char indChar2 = 0;
+            if (i + 1 < s.length()) {
+                indChar2 = s.charAt(i + 1);
+            }
+            if (isPunct(indChar) && isPunct(indChar2)) {
+                return true;
+            }
+        }
         return false;
+
+//		for(int i = 0; i <= s.length() - 1; i++) {
+//			char indChar = s.charAt(i);
+//			char indChar2 = 0;
+//			if(i + 1 <= s.length() - 1) {
+//				indChar2 = s.charAt(i + 1);
+//			}
+//			if(isPunct(indChar) && isPunct(indChar2)) {
+//				return true;
+//			}
+//		}
+//		return false;
     }
+
 }
