@@ -1,4 +1,4 @@
-package src.com.collegework.labfive;
+package com.collegework.labfive;
 
 public class ArrayPractice {
     /* sets every item in A[] to initialValue */

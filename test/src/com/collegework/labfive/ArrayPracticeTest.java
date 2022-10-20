@@ -1,8 +1,10 @@
 package src.com.collegework.labfive;
 
+import com.collegework.labfive.ArrayPractice;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Test;
 
 public class ArrayPracticeTest {
     /**
