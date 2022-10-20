@@ -18,9 +18,9 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]](https://github.com/RamosBros/brianCollegeWork/graphs/contributors)
-[![Forks][forks-shield]](https://github.com/RamosBros/brianCollegeWork/network/members)
-[![Stargazers][stars-shield]](https://github.com/RamosBros/brianCollegeWork/stargazers)
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+![Stargazers][stars-shield]
 [![Issues][issues-shield]](https://github.com/RamosBros/brianCollegeWork/issues)
 [![MIT License][license-shield]]()
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/brianramos1/)
@@ -208,23 +208,34 @@ known issues).
 
 <!-- CONTRIBUTING -->
 
-## Contributing
+[//]: # (## Contributing)
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any
-contributions you make are **greatly appreciated**.
+[//]: # (Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any)
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also
-simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+[//]: # (contributions you make are **greatly appreciated**.)
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+[//]: # ()
+[//]: # (If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[//]: # (simply open an issue with the tag "enhancement".)
 
+[//]: # (Don't forget to give the project a star! Thanks again!)
+
+[//]: # ()
+[//]: # (1. Fork the Project)
+
+[//]: # (2. Create your Feature Branch &#40;`git checkout -b feature/AmazingFeature`&#41;)
+
+[//]: # (3. Commit your Changes &#40;`git commit -m 'Add some AmazingFeature'`&#41;)
+
+[//]: # (4. Push to the Branch &#40;`git push origin feature/AmazingFeature`&#41;)
+
+[//]: # (5. Open a Pull Request)
+
+[//]: # ()
+[//]: # (<p align="right">&#40;<a href="#readme-top">back to top</a>&#41;</p>)
+
+[//]: # ()
 
 
 <!-- LICENSE -->
@@ -266,25 +277,25 @@ Project Link: [https://github.com/RamosBros/brianCollegeWork](https://github.com
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/RamosBros/brianCollegeWork.svg?style=for-the-badge
 
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
+[contributors-url]: https://github.com/RamosBros/brianCollegeWork/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/RamosBros/brianCollegeWork.svg?style=for-the-badge
 
-[forks-url]: https://github.com/github_username/repo_name/network/members
+[forks-url]: https://github.com/RamosBros/brianCollegeWork/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/RamosBros/brianCollegeWork.svg?style=for-the-badge
 
-[stars-url]: https://github.com/github_username/repo_name/stargazers
+[stars-url]: https://github.com/RamosBros/brianCollegeWork/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/RamosBros/brianCollegeWork.svg?style=for-the-badge
 
-[issues-url]: https://github.com/github_username/repo_name/issues
+[issues-url]: https://github.com/RamosBros/brianCollegeWork/issues
 
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/RamosBros/brianCollegeWork.svg?style=for-the-badge
 
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[license-url]: https://github.com/RamosBros/brianCollegeWork/blob/master/LICENSE.txt
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 
@@ -293,6 +304,9 @@ Project Link: [https://github.com/RamosBros/brianCollegeWork](https://github.com
 [product-screenshot]: images/screenshot.png
 
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+
+
+[Java-url]: https://www.java.com/en/
 
 [Next-url]: https://nextjs.org/
 
