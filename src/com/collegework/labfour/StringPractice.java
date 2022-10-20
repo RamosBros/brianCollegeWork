@@ -34,7 +34,7 @@ public class StringPractice {
 
     /*
      * returns the number of punctuation marks found in s starting at the given
-     * index.
+     * index.gi
      *
      * call your isPunct( ) method. Do not compy and paste the same logic into this
      * function
