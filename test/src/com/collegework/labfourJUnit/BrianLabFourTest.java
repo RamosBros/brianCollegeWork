@@ -1,8 +1,7 @@
 package src.com.collegework.labfourJUnit;
 
-import com.collegework.labtwo.lenny.LennyLabTwo;
+import com.collegework.labfour.StringPractice;
 import org.junit.jupiter.api.Test;
-import src.com.collegework.labfour.StringPractice;
 
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,18 +9,18 @@ import static org.junit.jupiter.api.Assertions.*;
 public class BrianLabFourTest extends StringPractice {
     @Test
     void testIsPunct() {
-        assertTrue(StringPractice.isPunct('.'));
-        assertTrue(StringPractice.isPunct(';'));
-        assertTrue(StringPractice.isPunct('?'));
-        assertTrue(StringPractice.isPunct('\''));
-        assertTrue(StringPractice.isPunct(','));
-        assertTrue(StringPractice.isPunct(':'));
-        assertTrue(StringPractice.isPunct('!'));
-        assertFalse(StringPractice.isPunct(' '));
-        assertFalse(StringPractice.isPunct('_'));
-        assertFalse(StringPractice.isPunct('a'));
-        assertFalse(StringPractice.isPunct('\t'));
-        assertFalse(StringPractice.isPunct('\n'));
+        assertTrue(StringPractice.isPunctuation('.'));
+        assertTrue(StringPractice.isPunctuation(';'));
+        assertTrue(StringPractice.isPunctuation('?'));
+        assertTrue(StringPractice.isPunctuation('\''));
+        assertTrue(StringPractice.isPunctuation(','));
+        assertTrue(StringPractice.isPunctuation(':'));
+        assertTrue(StringPractice.isPunctuation('!'));
+        assertFalse(StringPractice.isPunctuation(' '));
+        assertFalse(StringPractice.isPunctuation('_'));
+        assertFalse(StringPractice.isPunctuation('a'));
+        assertFalse(StringPractice.isPunctuation('\t'));
+        assertFalse(StringPractice.isPunctuation('\n'));
     }
 
     @Test

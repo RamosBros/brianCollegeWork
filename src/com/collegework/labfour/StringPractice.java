@@ -1,4 +1,4 @@
-package src.com.collegework.labfour;
+package com.collegework.labfour;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -12,12 +12,8 @@ public class StringPractice {
      *
      * (You don't have to worry about any others)
      */
-    public static boolean isPunct(char c) {
-        if (c == '\'' || c == ',' || c == '.' || c == ';' || c == ':' || c == '!' || c == '?') {
-            return true;
-        } else {
-            return false;
-        }
+    public static boolean isPunctuation(char c) {
+        return c == '\'' || c == ',' || c == '.' || c == ';' || c == ':' || c == '!' || c == '?';
     }
 
     /*
@@ -29,10 +25,8 @@ public class StringPractice {
     public static int numPunct(String s) {
         int numPunctuationMarks = 0;
         for (int i = 0; i <= s.length() - 1; i++) {
-            char individualLetter = s.charAt(i);
-            isPunct(individualLetter);
-            if (isPunct(individualLetter) == true) {
-                numPunctuationMarks = numPunctuationMarks + 1;
+            if (isPunctuation(s.charAt(i))) {
+                numPunctuationMarks++;
             }
         }
         return numPunctuationMarks;
@@ -48,10 +42,9 @@ public class StringPractice {
     public static int numPunct(String s, int startIndex) {
         int numPuncMarks = 0;
         for (int i = startIndex; i <= s.length() - 1; i++) {
-            char indLetter = s.charAt(i);
-            isPunct(indLetter);
-            if (isPunct(indLetter) == true) {
-                numPuncMarks = numPuncMarks + 1;
+
+            if (isPunctuation(s.charAt(i))) {
+                numPuncMarks++;
             }
         }
         return numPuncMarks;
@@ -67,8 +60,7 @@ public class StringPractice {
      */
     public static int indexOfFirstPunct(String s, int startPosition) {
         for (int i = startPosition; i <= s.length() - 1; i++) {
-            char indLetter = s.charAt(i);
-            if (isPunct(indLetter)) {
+            if (isPunctuation(s.charAt(i))) {
                 return i;
             }
         }
@@ -89,8 +81,7 @@ public class StringPractice {
      */
     public static int indexOfFirstPunct(String s) {
         for (int i = 0; i <= s.length() - 1; i++) {
-            char indLetter = s.charAt(i);
-            if (isPunct(indLetter)) {
+            if (isPunctuation(s.charAt(i))) {
                 return i;
             }
         }
@@ -106,8 +97,7 @@ public class StringPractice {
      */
     public static int indexOfLastPunct(String s) {
         for (int i = s.length() - 1; i >= 0; i--) {
-            char indLetter = s.charAt(i);
-            if (isPunct(indLetter)) {
+            if (isPunctuation(s.charAt(i))) {
                 return i;
             }
         }
@@ -120,8 +110,7 @@ public class StringPractice {
      */
     public static String substitute(String s, char oldChar, char newChar) {
         for (int i = 0; i <= s.length() - 1; i++) {
-            char indChar = s.charAt(i);
-            if (indChar == oldChar) {
+            if (s.charAt(i) == oldChar) {
                 s = s.replace(oldChar, newChar);
             }
         }
@@ -139,7 +128,7 @@ public class StringPractice {
         char newChar = ' ';
         for (int i = 0; i <= s.length() - 1; i++) {
             char indChar = s.charAt(i);
-            if (isPunct(indChar)) {
+            if (isPunctuation(indChar)) {
                 s = s.replace(indChar, newChar);
             }
         }
@@ -157,7 +146,7 @@ public class StringPractice {
     public static String withoutPunct(String s) {
         for (int i = s.length() - 1; i >= 0; i--) {
             char indChar = s.charAt(i);
-            if (isPunct(indChar)) {
+            if (isPunctuation(indChar)) {
                 String replaceString = Character.toString(indChar);
                 s = s.replace(replaceString, "");
             }
@@ -168,8 +157,7 @@ public class StringPractice {
     /* returns true if c is found in s or false otherwise */
     public static boolean foundIn(String s, char c) {
         for (int i = 0; i <= s.length() - 1; i++) {
-            char indChar = s.charAt(i);
-            if (indChar == c) {
+            if (s.charAt(i) == c) {
                 return true;
             }
         }
@@ -202,7 +190,7 @@ public class StringPractice {
     public static boolean onlyPunct(String s) {
         for (int i = 0; i <= s.length() - 1; i++) {
             char indChar = s.charAt(i);
-            if (!isPunct(indChar)) {
+            if (!isPunctuation(indChar)) {
                 return false;
             }
         }
@@ -217,7 +205,7 @@ public class StringPractice {
     public static boolean noPunct(String s) {
         for (int i = 0; i <= s.length() - 1; i++) {
             char indChar = s.charAt(i);
-            if (isPunct(indChar)) {
+            if (isPunctuation(indChar)) {
                 return false;
             }
         }
@@ -299,7 +287,7 @@ public class StringPractice {
             if (i + 1 < s.length()) {
                 indChar2 = s.charAt(i + 1);
             }
-            if (isPunct(indChar) && isPunct(indChar2)) {
+            if (isPunctuation(indChar) && isPunctuation(indChar2)) {
                 return true;
             }
         }
