@@ -95,15 +95,34 @@ public class ArrayPractice {
 
     /* returns the index of the largest item found in A */
     public static int indexOfLargest(int[] A) {
-        return -1;
+        int item = 0;
+        int z = 0;
+        for(int i = 0; i < A.length; i++) {
+            if (A[i] > item) {
+                item = A[i];
+                z = i;
+            }
+        }
+        return z;
     }
 
     /* returns the index of the largest odd number
      * in A[] or -1 if A[] contains no odd numbers */
     public static int indexOfLargestOdd(int[] A) {
-        return -1;
+        int item = 0;
+        int z = 0;
+        for( int i = 0; i < A.length; i++) {
+            if (A[i] > item) {
+                if (A[i] % 2 != 0) {
+                    item = A[i];
+                    z = i;
+                } else {
+                    return -1;
+                }
+            }
+        }
+        return z;
     }
-
     /* inserts n into A[] at A[index] shifting all */
     /*  the previous items one place to the right. For example */
     /*  if A is  */
