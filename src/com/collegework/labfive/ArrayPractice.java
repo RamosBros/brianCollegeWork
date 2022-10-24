@@ -84,7 +84,13 @@ public class ArrayPractice {
 
     /* returns the largest item found in A */
     public static int largest(int[] A) {
-        return -1;
+        int item = 0;
+        for(int i = 0; i < A.length; i++){
+            if(A[i] > item) {
+                item = A[i];
+            }
+        }
+        return item;
     }
 
     /* returns the index of the largest item found in A */
@@ -162,8 +168,5 @@ public class ArrayPractice {
      * the array {10,20,5,32,9,8} */
     public static int[] uniques(int[] A) {
         return null;
-    }
-
-    public static void main(String[] args) {
     }
 }
