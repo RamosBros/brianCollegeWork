@@ -1,9 +1,9 @@
-package com.collegework.labfive;
+package src.com.collegework.labfive;
 
 public class ArrayPractice {
     /* sets every item in A[] to initialValue */
-    public static void initialize(int A[], int initialValue) {
-        for(int i = 0; i < A.length; i++) {
+    public static void initialize(int[] A, int initialValue) {
+        for (int i = 0; i < A.length; i++) {
             A[i] = initialValue;
         }
     }
@@ -27,19 +27,19 @@ public class ArrayPractice {
         return 30.0;
 
      */
-    public static double average(int A[]) {
+    public static double average(int[] A) {
         int sum = 0;
-        for(int num: A) {
+        for (int num : A) {
             sum += num;
         }
-        return sum/A.length;
+        return sum / A.length;
     }
 
     /* returns the number of times that x appears in A[] */
-    public static int numOccurrences(int A[], int x) {
+    public static int numOccurrences(int[] A, int x) {
         int amntTimesAppear = 0;
-        for(int i = 0; i < A.length; i++) {
-            if(A[i] == x) {
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] == x) {
                 amntTimesAppear += 1;
             }
         }
@@ -49,10 +49,10 @@ public class ArrayPractice {
 
     /* returns the index of the first occurrence of
      * x in A[] or -1 if x doesn't exist in A[] */
-    public static int find(int A[], int x) {
-        for(int i = 0; i < A.length; i++) {
-            if(A[i] == x) {
-
+    public static int find(int[] A, int x) {
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] == x) {
+                return i;
             }
         }
         return -1;
@@ -61,29 +61,40 @@ public class ArrayPractice {
     /* Returns the index of the first occurrence of
      * item within the first n elements of A[] or -1
      * if item is not among the first n elements of A[] */
-    public static int findN(int A[], int item, int n) {
+    public static int findN(int[] A, int item, int n) {
+        for(int i = 0; i < n; i++){
+            if(A[i] == item){
+                return i;
+            }
+        }
         return -1;
     }
 
+
     /* returns the index of the last occurrence of
      * x in A[] or -1 if x doesn't exist in A[] */
-    public static int findLast(int A[], int x) {
+    public static int findLast(int[] A, int x) {
+        for(int i = A.length - 1; i >= 0; i--){
+            if(A[i] == x){
+                return i;
+            }
+        }
         return -1;
     }
 
     /* returns the largest item found in A */
-    public static int largest(int A[]) {
+    public static int largest(int[] A) {
         return -1;
     }
 
     /* returns the index of the largest item found in A */
-    public static int indexOfLargest(int A[]) {
+    public static int indexOfLargest(int[] A) {
         return -1;
     }
 
     /* returns the index of the largest odd number
      * in A[] or -1 if A[] contains no odd numbers */
-    public static int indexOfLargestOdd(int A[]) {
+    public static int indexOfLargestOdd(int[] A) {
         return -1;
     }
 
@@ -108,13 +119,12 @@ public class ArrayPractice {
     /*                                              */
     /*  if index < 0 or index >= A.length-1, the method */
     /*                                    does nothing */
-    public static void insert(int A[], int n, int index) {
-        return;
+    public static void insert(int[] A, int n, int index) {
     }
 
     /* returns a new array consisting of all of the
      * elements of A[] */
-    public static int[] copy(int A[]) {
+    public static int[] copy(int[] A) {
         return null;
     }
 
@@ -123,7 +133,7 @@ public class ArrayPractice {
        new array of size n, with the first A.length elements
        exactly the same as A, and the remaining n-A.length elements
        set to 0. If n<=0, returns null. */
-    public static int[] copyN(int A[], int n) {
+    public static int[] copyN(int[] A, int n) {
         return null;
     }
 
@@ -133,7 +143,7 @@ public class ArrayPractice {
      A[] is: {10,20,30} and
      B[] is: {5, 9, 38}, the method returns the
      array : {10,20,30,5,9,38} */
-    public static int[] copyAll(int A[], int B[]) {
+    public static int[] copyAll(int[] A, int[] B) {
         return null;
     }
 
@@ -141,8 +151,7 @@ public class ArrayPractice {
      * For example, if A[] is:
      {10,20,30,40,50}, after the method, A[] would
      be {50,40,30,20,10} */
-    public static void reverse(int A[]) {
-        return;
+    public static void reverse(int[] A) {
     }
 
     /* Extra credit:
@@ -151,11 +160,10 @@ public class ArrayPractice {
      * elements of A, but with no duplicates. For example,
      * if A[] is {10,20,5,32,5,10,9,32,8}, the method returns
      * the array {10,20,5,32,9,8} */
-    public static int[] uniques(int A[]) {
+    public static int[] uniques(int[] A) {
         return null;
     }
 
     public static void main(String[] args) {
-        return;
     }
 }

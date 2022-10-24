@@ -1,6 +1,6 @@
 package src.com.collegework.labfive;
 
-import com.collegework.labfive.ArrayPractice;
+import src.com.collegework.labfive.ArrayPractice;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
