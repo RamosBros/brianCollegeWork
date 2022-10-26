@@ -1,6 +1,11 @@
 package src.com.collegework.labfive;
 import java.util.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+
+// All of this could be done better probably
 public class ArrayPractice {
     /* sets every item in A[] to initialValue */
     public static void initialize(int[] A, int initialValue) {
@@ -12,39 +17,24 @@ public class ArrayPractice {
     /* returns the average of the items in A
      * Be careful: A[] is an array of int and the method returns
      * double. What do we do to handle this?
-        int[] A = { 10, 20, 30, 40, 50 };
-        i = 0;0 < 5; i++
-        sum = 0 + 10;
-        i = 1; 1 < 5; i++
-        sum = 10 + 20;
-        i = 2; 2 < 5; i++
-        sum = 30 + 30;
-        i = 3; 2 < 5; i++
-        sum = 60 + 40;
-        i = 4; 4 < 5; i++
-        sum = 100 + 50;
-        double result = 150/5;
-        result = 30.9;
-        return 30.0;
-
      */
     public static double average(int[] A) {
         int sum = 0;
         for (int num : A) {
             sum += num;
         }
-        return sum / A.length;
+        return (double) sum / A.length;
     }
 
     /* returns the number of times that x appears in A[] */
     public static int numOccurrences(int[] A, int x) {
-        int amntTimesAppear = 0;
-        for (int i = 0; i < A.length; i++) {
-            if (A[i] == x) {
-                amntTimesAppear += 1;
+        int occurrences = 0;
+        for (int j : A) {
+            if (j == x) {
+                occurrences++;
             }
         }
-        return amntTimesAppear;
+        return occurrences;
     }
 
 
@@ -63,6 +53,8 @@ public class ArrayPractice {
      * item within the first n elements of A[] or -1
      * if item is not among the first n elements of A[] */
     public static int findN(int[] A, int item, int n) {
+        if (n > A.length) return -1;
+
         for (int i = 0; i < n; i++) {
             if (A[i] == item) {
                 return i;
@@ -85,31 +77,41 @@ public class ArrayPractice {
 
     /* returns the largest item found in A */
     public static int largest(int[] A) {
-        int item = 0;
-        for (int i = 0; i < A.length; i++) {
-            if (A[i] > item) {
-                item = A[i];
+        if (A.length == 0) {
+            return -1;
+        }
+
+        int largest = Integer.MIN_VALUE;
+        for (int num : A) {
+            if (num > largest) {
+                largest = num;
             }
         }
-        return item;
+        return largest;
     }
 
     /* returns the index of the largest item found in A */
     public static int indexOfLargest(int[] A) {
-        int item = 0;
-        int z = 0;
+        if (A.length == 0) {
+            return 0;
+        }
+
+        int largest = 0;
         for (int i = 0; i < A.length; i++) {
-            if (A[i] > item) {
-                item = A[i];
-                z = i;
+            if (A[i] > A[largest]) {
+                largest = i;
             }
         }
-        return z;
+        return largest;
     }
 
     /* returns the index of the largest odd number
      * in A[] or -1 if A[] contains no odd numbers */
     public static int indexOfLargestOdd(int[] A) {
+        if (A.length == 0) {
+            return -1;
+        }
+
         int item = 0;
         int z = 0;
         for (int i = 0; i < A.length; i++) {
@@ -211,6 +213,12 @@ public class ArrayPractice {
      * For example, if A[] is:
      {10,20,30,40,50}, after the method, A[] would
      be {50,40,30,20,10} */
+    // cool way to swap
+    /*
+    A[left] = A[left]^A[right]
+    A[right] = A[left]^A[right]
+    A[left] = A[left]^A[right]
+     */
     public static void reverse(int[] A) {
         int left = 0;
         int right = A.length - 1;
@@ -231,6 +239,8 @@ public class ArrayPractice {
      * if A[] is {10,20,5,32,5,10,9,32,8}, the method returns
      * the array {10,20,5,32,9,8} */
     public static int[] uniques(int[] A) {
+        // easy way
+        // hashset doesn't allow duplicates
         HashSet<Integer> hashSet = new HashSet<>();
         ArrayList<Integer> arrayList = new ArrayList<>();
 
