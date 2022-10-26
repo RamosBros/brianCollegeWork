@@ -1,4 +1,5 @@
-package com.collegework.labfive;
+package src.com.collegework.labfive;
+import java.util.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +9,9 @@ import java.util.HashSet;
 public class ArrayPractice {
     /* sets every item in A[] to initialValue */
     public static void initialize(int[] A, int initialValue) {
-        Arrays.fill(A, initialValue);
+        for (int i = 0; i < A.length; i++) {
+            A[i] = initialValue;
+        }
     }
 
     /* returns the average of the items in A
@@ -60,6 +63,7 @@ public class ArrayPractice {
         return -1;
     }
 
+
     /* returns the index of the last occurrence of
      * x in A[] or -1 if x doesn't exist in A[] */
     public static int findLast(int[] A, int x) {
@@ -108,17 +112,20 @@ public class ArrayPractice {
             return -1;
         }
 
-        int largest = 0;
+        int item = 0;
+        int z = 0;
         for (int i = 0; i < A.length; i++) {
-            int curr = A[largest];
-            if (A[i] > curr && (curr % 2 != 0)) {
-                largest = i;
+            if (A[i] > item) {
+                if (A[i] % 2 != 0) {
+                    item = A[i];
+                    z = i;
+                } else {
+                    return -1;
+                }
             }
         }
-
-        return (largest == 0) ? -1 : largest;
+        return z;
     }
-
     /* inserts n into A[] at A[index] shifting all */
     /*  the previous items one place to the right. For example */
     /*  if A is  */
@@ -187,10 +194,8 @@ public class ArrayPractice {
      * elements of B[]. For example, if
      A[] is: {10,20,30} and
      B[] is: {5, 9, 38}, the method returns the
-     array : {10,20,30,5,9,38}
-     *
-     * This is what they probably want instead of array.copy method*/
-    public static int[] copyAll(int A[], int B[]) {
+     array : {10,20,30,5,9,38} */
+    public static int[] copyAll(int[] A, int[] B) {
         int[] C = new int[A.length + B.length];
 
         for (int i = 0; i < A.length; i++) {
@@ -248,9 +253,5 @@ public class ArrayPractice {
 
         //this is streams, something new and pretty cool since java-8
         return arrayList.stream().mapToInt(i -> i).toArray();
-    }
-
-    public static void main(String[] args) {
-        return;
     }
 }
