@@ -18,15 +18,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-![Stargazers][stars-shield]
-[![Issues][issues-shield]](https://github.com/RamosBros/brianCollegeWork/issues)
-[![MIT License][license-shield]]()
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/brianramos1/)
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/lennyramos/)
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -43,18 +34,15 @@ all java work done by Brian in college
 <br />
 <a href="https://github.com/RamosBros/brianCollegeWork"><strong>Explore the docs »</strong></a>
 <br />
-<br />
-<a href="https://github.com/RamosBros/brianCollegeWork">View Demo</a>
-·
+<!-- <a href="https://github.com/RamosBros/brianCollegeWork">View Demo</a> -->
 <a href="https://github.com/RamosBros/brianCollegeWork/issues">Report Bug</a>
-·
-<a href="https://github.com/RamosBros/brianCollegeWork/issues">Request Feature</a>
+<!-- <a href="https://github.com/RamosBros/brianCollegeWork/issues">Request Feature</a> -->
   </p>
 </div>
 
 
 
-<!-- TABLE OF CONTENTS -->
+<!-- TABLE OF CONTENTS
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -78,7 +66,7 @@ all java work done by Brian in college
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
-</details>
+</details> -->
 
 
 
@@ -86,17 +74,10 @@ all java work done by Brian in college
 
 ## About The Project
 
-[//]: # ([![Product Name Screen Shot]&#40;&#41;[product-screenshot]]&#40;https://example.com&#41;)
-
-[//]: # (Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor)
-
-[//]: # (for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`)
-
-[//]: # (, `project_title`, `project_description`)
-
+- This repo is meant to be a place for me to store all of the labs, projects, etc, I do as a college student.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
+<!-- ### Built With
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
@@ -105,156 +86,40 @@ all java work done by Brian in college
 * [![Svelte][Svelte.dev]][Svelte-url]
 * [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+* [![JQuery][JQuery.com]][JQuery-url] -->
 
 
-
-<!-- GETTING STARTED -->
-
-[//]: # (## Getting Started)
-
-[//]: # ()
-[//]: # (This is an example of how you may give instructions on setting up your project locally.)
-
-[//]: # (To get a local copy up and running follow these simple example steps.)
-
-[//]: # ()
-[//]: # (### Prerequisites)
-
-[//]: # ()
-[//]: # (This is an example of how to list things you need to use the software and how to install them.)
-
-[//]: # ()
-[//]: # (* npm)
-
-[//]: # (  ```sh)
-
-[//]: # (  npm install npm@latest -g)
-
-[//]: # (  ```)
-
-[//]: # ()
-[//]: # (### Installation)
-
-[//]: # ()
-[//]: # (1. Get a free API Key at [https://example.com]&#40;https://example.com&#41;)
-
-[//]: # (2. Clone the repo)
-
-[//]: # (   ```sh)
-
-[//]: # (   git clone https://github.com/github_username/repo_name.git)
-
-[//]: # (   ```)
-
-[//]: # (3. Install NPM packages)
-
-[//]: # (   ```sh)
-
-[//]: # (   npm install)
-
-[//]: # (   ```)
-
-[//]: # (4. Enter your API in `config.js`)
-
-[//]: # (   ```js)
-
-[//]: # (   const API_KEY = 'ENTER YOUR API';)
-
-[//]: # (   ```)
-
-[//]: # ()
-[//]: # (<p align="right">&#40;<a href="#readme-top">back to top</a>&#41;</p>)
-
-[//]: # ()
-
-
-[//]: # (<!-- USAGE EXAMPLES -->)
-
-[//]: # ()
-[//]: # (## Usage)
-
-[//]: # ()
-[//]: # (Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos)
-
-[//]: # (work well in this space. You may also link to more resources.)
-
-[//]: # ()
-[//]: # (_For more examples, please refer to the [Documentation]&#40;https://example.com&#41;_)
-
-[//]: # ()
-[//]: # (<p align="right">&#40;<a href="#readme-top">back to top</a>&#41;</p>)
-
-[//]: # ()
 
 
 <!-- ROADMAP -->
-
+<!-- 
 ## Roadmap
 
 - [ ] Feature 1
 - [ ] Feature 2
 - [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/RamosBros/brianCollegeWork/issues) for a full list of proposed features (and
-known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+    - [ ] Nested Feature -->
 
 
-
-<!-- CONTRIBUTING -->
-
-[//]: # (## Contributing)
-
-[//]: # (Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any)
-
-[//]: # (contributions you make are **greatly appreciated**.)
-
-[//]: # ()
-[//]: # (If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also)
-
-[//]: # (simply open an issue with the tag "enhancement".)
-
-[//]: # (Don't forget to give the project a star! Thanks again!)
-
-[//]: # ()
-[//]: # (1. Fork the Project)
-
-[//]: # (2. Create your Feature Branch &#40;`git checkout -b feature/AmazingFeature`&#41;)
-
-[//]: # (3. Commit your Changes &#40;`git commit -m 'Add some AmazingFeature'`&#41;)
-
-[//]: # (4. Push to the Branch &#40;`git push origin feature/AmazingFeature`&#41;)
-
-[//]: # (5. Open a Pull Request)
-
-[//]: # ()
-[//]: # (<p align="right">&#40;<a href="#readme-top">back to top</a>&#41;</p>)
-
-[//]: # ()
 
 
 <!-- LICENSE -->
 
-## License
+<!-- ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+ -->
 
 
 <!-- CONTACT -->
 
 ## Contact
 
-Brian Ramos - [personal website](BrianEBranch.github.io) - tup86891@temple.edu
+Brian Ramos - [personal website](BrianEBranch.github.io) - tup86891@temple.edu - [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/brianramos1/)
 
-Lenny Ramos - [personal website](https://lennyramos.com/Home) - <!-- add whatever email/link here leonard: email@email_client.com -->
+Lenny Ramos - [personal website](https://lennyramos.com/Home) - [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/lennyramos/)
 
 Project Link: [https://github.com/RamosBros/brianCollegeWork](https://github.com/RamosBros/brianCollegeWork)
 
@@ -264,13 +129,13 @@ Project Link: [https://github.com/RamosBros/brianCollegeWork](https://github.com
 
 <!-- ACKNOWLEDGMENTS -->
 
-## Acknowledgments
+<!-- ## Acknowledgments
 
 * []()
 * []()
 * []()
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
