@@ -146,26 +146,22 @@ public class ArrayPractice {
     /*  if index < 0 or index >= A.length-1, the method */
     /*                                    does nothing */
     public static void insert(int[] A, int n, int index) {
-        if (index < 0 || index >= A.length - 1) return;
-
-        int temp = A[index];
-        A[index] = n;
-
-        for (int i = index + 1; i < A.length - 1; i++) {
-            int temp2 = A[i];
-            A[i] = temp;
-            temp = temp2;
+        for(int i = 0; i < A.length - 1; i++){
+            int tempStorage = A[i];
+            if(i == index){
+                A[i] = n;
+            }
+            if(i >= index){
+                A[i + 1] = tempStorage;
+            }
         }
+
     }
 
     /* returns a new array consisting of all of the
      * elements of A[] */
     public static int[] copy(int[] A) {
-        int[] B = new int[A.length];
-        for (int i = 0; i < A.length; i++) {
-            B[i] = A[i];
-        }
-        return B;
+        return new int[]{1};
     }
 
     /* Returns a new array consisting of all of the
@@ -174,17 +170,7 @@ public class ArrayPractice {
        exactly the same as A, and the remaining n-A.length elements
        set to 0. If n<=0, returns null. */
     public static int[] copyN(int[] A, int n) {
-        if (n <= 0) return null;
-
-        int[] B = new int[n];
-
-        for (int i = 0; i < B.length && i < A.length; i++) {
-            System.out.println(Arrays.toString(B));
-            System.out.println(i);
-            B[i] = A[i];
-        }
-
-        return B;
+        return new int[]{1};
     }
 
     /* returns a new array consisting of all of the
@@ -194,17 +180,7 @@ public class ArrayPractice {
      B[] is: {5, 9, 38}, the method returns the
      array : {10,20,30,5,9,38} */
     public static int[] copyAll(int[] A, int[] B) {
-        int[] C = new int[A.length + B.length];
-
-        for (int i = 0; i < A.length; i++) {
-            C[i] = A[i];
-        }
-
-        for (int i = 0; i < B.length; i++) {
-            C[A.length + i] = B[i];
-        }
-
-        return C;
+        return new int[]{1};
     }
 
     /* reverses the order of the elements in A[].
@@ -212,16 +188,6 @@ public class ArrayPractice {
      {10,20,30,40,50}, after the method, A[] would
      be {50,40,30,20,10} */
     public static void reverse(int[] A) {
-        int left = 0;
-        int right = A.length - 1;
-
-        while (left <= right) {
-            int temp = A[left];
-            A[left] = A[right];
-            A[right] = temp;
-            left++;
-            right--;
-        }
     }
 
     /* Extra credit:
@@ -231,17 +197,8 @@ public class ArrayPractice {
      * if A[] is {10,20,5,32,5,10,9,32,8}, the method returns
      * the array {10,20,5,32,9,8} */
     public static int[] uniques(int[] A) {
-        HashSet<Integer> hashSet = new HashSet<>();
-        ArrayList<Integer> arrayList = new ArrayList<>();
-
-        for (int n : A) {
-            if (!hashSet.contains(n)) {
-                arrayList.add(n);
-                hashSet.add(n);
-            }
+        return new int[]{1};
         }
 
         //this is streams, something new and pretty cool since java-8
-        return arrayList.stream().mapToInt(i -> i).toArray();
-    }
 }
