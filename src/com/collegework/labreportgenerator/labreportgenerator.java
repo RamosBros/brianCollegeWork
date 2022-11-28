@@ -2,7 +2,6 @@ package src.com.collegework.labreportgenerator;
 import javax.sound.midi.Soundbank;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
 
@@ -14,6 +13,10 @@ public class labreportgenerator {
         System.out.println("Please input the name of your file(include the .etc");
 
             String nameOfFile = INPUT.nextLine();
+
+            for(int i = 0; i < nameOfFile.length(); i++){
+
+            }
             String removeFileSuffixAkaTxt = nameOfFile.substring(0, nameOfFile.length() - 4);
 
             System.out.println(removeFileSuffixAkaTxt + ".docx");
