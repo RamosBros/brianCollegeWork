@@ -1,24 +1,18 @@
 package src.com.collegework.labten;
+
 import src.com.collegework.labten.Question;
 
-public class ObjectiveQuestion extends Question{
-    private int points;
-    private String correctAnswer;
-    private String difficulty;
-    private int answerSpace;
-    private String questionText;
+public class ObjectiveQuestion extends Question {
+    public String correctAnswer;
 
     public ObjectiveQuestion(String correctAnswer, int points, String difficulty, int answerSpace, String questionText){
-        this.points = points;
-        this.correctAnswer = correctAnswer;
-        this.difficulty = difficulty;
-        this.answerSpace = answerSpace;
-        this.questionText = questionText;
+        super(points, difficulty, answerSpace, questionText);
     }
-    public String toString(){
+    public String toString() {
         return points + " " + difficulty + " " + answerSpace + " " + questionText;
     }
-    public String toAnswerString(){
+
+    public String toAnswerString() {
         return correctAnswer;
     }
 
