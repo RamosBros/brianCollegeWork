@@ -1,14 +1,16 @@
 package src.com.collegework.labten;
 
 public class FillInTheBlankQuestion extends ObjectiveQuestion {
-    public FillInTheBlankQuestion(String correctAnswer, int points, String difficulty, int answerSpace, String questionText) {
+    public FillInTheBlankQuestion(String correctAnswer, int points, Difficulty difficulty, int answerSpace, String questionText) {
         super(correctAnswer, points, difficulty, answerSpace, questionText);
     }
 
-    public String toString() {
+    public String printQuestion() {
         return "_____" + " " + questionText;
     }
-    public String toAnswerString(){
-        return correctAnswer + " " + questionText;
+
+    @Override
+    public String printQuestionAnswer() {
+        return questionText + " " + correctAnswer;
     }
 }

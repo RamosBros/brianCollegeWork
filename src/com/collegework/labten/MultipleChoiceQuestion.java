@@ -1,20 +1,55 @@
 package src.com.collegework.labten;
 
-import java.util.Arrays;
 
-public class MultipleChoiceQuestion extends FillInTheBlankQuestion{
+public class MultipleChoiceQuestion extends FillInTheBlankQuestion {
     String[] possibleAnswers;
-    String answer;
+    String correctAnswer;
+    static final String ANSWER_SYMBOL = "****";
 
-    public MultipleChoiceQuestion(String[] possibleAnswers, String correctAnswer, int points, String difficulty, int answerSpace, String questionText){
+    public MultipleChoiceQuestion(String[] possibleAnswers, String correctAnswer, int points, Difficulty difficulty, int answerSpace, String questionText) {
         super(correctAnswer, points, difficulty, answerSpace, questionText);
         this.possibleAnswers = possibleAnswers;
-        this.answer = correctAnswer;
+        this.correctAnswer = correctAnswer;
     }
-    public String toString(){
-        return questionText + "\n" + Arrays.toString(possibleAnswers);
+
+    public String printQuestion() {
+        return display(false);
     }
-    public String toAnswerString(){
-        return questionText + " " + correctAnswer;
+
+    @Override
+    public String printQuestionAnswer() {
+        return display(true);
+    }
+
+    private String display(boolean showAnswer) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(questionText);
+        stringBuilder.append("\n");
+
+        for (int i = 0; i < possibleAnswers.length - 1; i++) {
+            stringBuilder.append(i + 1);
+
+            if (showAnswer && (possibleAnswers[i] == correctAnswer)) {
+                stringBuilder.append(ANSWER_SYMBOL);
+            }
+
+            stringBuilder.append(possibleAnswers[i]);
+
+            if (showAnswer && (possibleAnswers[i] == correctAnswer)) {
+                stringBuilder.append(ANSWER_SYMBOL);
+            }
+
+            stringBuilder.append("\n");
+        }
+
+        return stringBuilder.toString();
     }
 }
+// can do this but not optimal
+// String question = questionText;
+
+// for (int j = 0; j < possibleAnswers.length; j++) {
+//     question += j + ". " + possibleAnswers[j] + "\n";
+// }
+
+// return question;

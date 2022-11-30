@@ -1,6 +1,5 @@
 package src.com.collegework.labfive;
 
-import src.com.collegework.labfive.ArrayPractice;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -15,7 +14,7 @@ public class ArrayPracticeTest {
         System.out.println("initialize");
         int[] A = new int[5];
         int initialValue = 5;
-        ArrayPractice.initialize(A, initialValue);
+//        ArrayPractice.initialize(A, initialValue);
         assertArrayEquals(new int[] { 5, 5, 5, 5, 5 }, A);
     }
 
